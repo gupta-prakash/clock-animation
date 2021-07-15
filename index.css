@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(225 225 225 / 15%);
+}
+
+#container{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    width: 30em;
+    padding: 3em 3em;
+    margin: 2em auto;
+    box-shadow: 12px 12px 32px -14px #7d7979;
+    border-right: 7px solid #e7e5e5;
+    border-bottom: 7px solid #e7e5e5;
+    border-radius: 5px;
+}
+
+.clock{
+    border: 2px solid #f6f6f6;
+    height: 3em;
+    width: 3em;
+    border-radius: 25px;
+    box-shadow: 2px 2px 3px 0px #5d5454;
+}
+
+.clock-hand1,.clock-hand2{
+    position: relative;
+    border-bottom: 3px solid #5c3030;
+    width: 23px;
+    transform-origin: left;
+}
+.clock-hand1{
+    left: 23px;
+    top: 20px;
+}
+.clock-hand2{
+    left: 23.5px;
+    top: 17px;
+}
+
+#clock1-hand1,#clock5-hand1,#clock10-hand1,#clock37-hand1,#clock49-hand1,#clock53-hand1,#clock58-hand1,#clock62-hand1,#clock78-hand1,#clock81-hand1{
+    animation: hands_90_bottom_right1 5s ease-in-out 1s 1 forwards;
+    transform:rotate(180deg);
+}
+#clock1-hand2,#clock5-hand2,#clock10-hand2,#clock37-hand2,#clock49-hand2,#clock53-hand2,#clock58-hand2,#clock62-hand2,#clock78-hand2,#clock81-hand2{
+    animation: hands_90_bottom_right2 6s ease-in-out 1s 1 forwards;
+    transform:rotate(230deg);
+}
+
+#clock9-hand1,#clock17-hand1,#clock25-hand1,#clock33-hand1,#clock18-hand1,#clock19-hand1,#clock26-hand1,#clock27-hand1,#clock12-hand1,#clock20-hand1,#clock28-hand1,#clock36-hand1,#clock22-hand1,#clock30-hand1,#clock15-hand1,#clock23-hand1,#clock31-hand1,#clock57-hand1,#clock65-hand1,#clock76-hand1,#clock84-hand1,#clock85-hand1,#clock64-hand1{
+    animation: hands_180_vertical1 6s ease-in-out 1s 1 forwards;
+    transform:rotate(130deg);
+}
+#clock9-hand2,#clock17-hand2,#clock25-hand2,#clock33-hand2,#clock18-hand2,#clock19-hand2,#clock26-hand2,#clock27-hand2,#clock12-hand2,#clock20-hand2,#clock28-hand2,#clock36-hand2,#clock22-hand2,#clock30-hand2,#clock15-hand2,#clock23-hand2,#clock31-hand2,#clock57-hand2,#clock65-hand2,#clock76-hand2,#clock84-hand2,#clock85-hand2,#clock64-hand2{
+    animation: hands_180_vertical2 6s ease-in-out 1s 1 forwards;
+    transform:rotate(-70deg);
+}
+
+#clock2-hand1,#clock3-hand1,#clock6-hand1,#clock42-hand1,#clock43-hand1,#clock46-hand1,#clock47-hand1,#clock50-hand1,#clock51-hand1,#clock59-hand1,#clock67-hand1,#clock74-hand1,#clock82-hand1,#clock90-hand1,#clock91-hand1,#clock95-hand1{
+    animation: hands_180_horizontal1 6s ease-in-out 1s 1 forwards;
+    transform:rotate(40deg);
+}
+#clock2-hand2,#clock3-hand2,#clock6-hand2,#clock42-hand2,#clock43-hand2,#clock46-hand2,#clock47-hand2,#clock50-hand2,#clock51-hand2,#clock59-hand2,#clock67-hand2,#clock74-hand2,#clock82-hand2,#clock90-hand2,#clock91-hand2,#clock95-hand2{
+    animation: hands_180_horizontal2 6s ease-in-out 1s 1 forwards;
+    transform:rotate(200deg);
+}
+
+#clock4-hand1,#clock7-hand1,#clock11-hand1,#clock14-hand1,#clock40-hand1,#clock52-hand1,#clock63-hand1,#clock68-hand1,#clock75-hand1{
+    animation: hands_90_bottom_left1 6s ease-in-out 1s 1 forwards;
+    transform:rotate(0deg);
+}
+#clock4-hand2,#clock7-hand2,#clock11-hand2,#clock14-hand2,#clock40-hand2,#clock52-hand2,#clock63-hand2,#clock68-hand2,#clock75-hand2{
+    animation: hands_90_bottom_left2 6s ease-in-out 1s 1 forwards;
+    transform:rotate(300deg);
+}
+
+#clock41-hand1,#clock34-hand1,#clock13-hand1,#clock45-hand1,#clock39-hand1,#clock66-hand1,#clock70-hand1,#clock73-hand1,#clock86-hand1,#clock89-hand1,#clock93-hand1{
+    animation: hands_90_top_right1 6s ease-in-out 1s 1 forwards;
+    transform:rotate(90deg);
+}
+#clock41-hand2,#clock34-hand2,#clock13-hand2,#clock45-hand2,#clock39-hand2,#clock66-hand2,#clock70-hand2,#clock73-hand2,#clock86-hand2,#clock89-hand2,#clock93-hand2{
+    animation: hands_90_top_right2 6s ease-in-out 1s 1 forwards;
+    transform:rotate(180deg);
+}
+
+#clock48-hand1,#clock35-hand1,#clock38-hand1,#clock44-hand1,#clock60-hand1,#clock87-hand1,#clock96-hand1,#clock83-hand1,#clock92-hand1{
+    animation: hands_90_top_left1 6s ease-in-out 1s 1 forwards;
+    transform:rotate(30deg);
+}
+#clock48-hand2,#clock35-hand2,#clock38-hand2,#clock44-hand2,#clock60-hand2,#clock87-hand2,#clock96-hand2,#clock83-hand2,#clock92-hand2{
+    animation: hands_90_top_left2 6s ease-in-out 1s 1 forwards;
+    transform:rotate(110deg);
+}
+
+#clock8-hand1,#clock16-hand1,#clock24-hand1,#clock32-hand1,#clock21-hand1,#clock29-hand1{
+    animation: hands_0_empty1 6s ease-in-out 1s 1 forwards;
+    transform:rotate(-30deg);
+}
+#clock8-hand2,#clock16-hand2,#clock24-hand2,#clock32-hand2,#clock21-hand2,#clock29-hand2{
+    animation: hands_0_empty2 6s ease-in-out 1s 1 forwards;
+    transform:rotate(10deg);
+}
+
+#clock61-hand1,#clock88-hand1{
+    animation: hands_180_vertical1 8s ease-in 1s 1 forwards;
+    transform:rotate(130deg);
+}
+#clock61-hand2,#clock88-hand2{
+    animation: hands_180_vertical2 8s ease-in 1s 1 forwards;
+    transform:rotate(-70deg);
+}
+
+#clock54-hand1,#clock55-hand1,#clock94-hand1{
+    animation: hands_180_horizontal1 8s ease-in 1s 1 forwards;
+    transform:rotate(40deg);
+}
+#clock54-hand2,#clock55-hand2,#clock94-hand2{
+    animation: hands_180_horizontal2 8s ease-in 1s 1 forwards;
+    transform:rotate(200deg);
+}
+
+#clock79-hand1,#clock56-hand1{
+    animation: hands_90_bottom_left1 8s ease-in 1s 1 forwards;
+    transform:rotate(0deg);
+}
+#clock79-hand2,#clock56-hand2{
+    animation: hands_90_bottom_left2 8s ease-in 1s 1 forwards;
+    transform:rotate(300deg);
+
+}
+#clock71-hand1{
+    animation: hands_90_top_left1 8s ease-in 1s 1 forwards;
+    transform:rotate(30deg);
+}
+#clock71-hand2{
+    animation: hands_90_top_left2 8s ease-in 1s 1 forwards;
+    transform:rotate(110deg);
+}
+
+#clock69-hand1{
+    animation: hands_135_top_right1 10s ease-in-out 1s 1 forwards;
+    transform:rotate(-20deg);
+}
+#clock69-hand2{
+    animation: hands_135_top_right2 10s ease-in-out 1s 1 forwards;
+    transform:rotate(10deg);
+}
+
+#clock72-hand1{
+    animation: hands_135_top_left1  10s ease-in-out 1s 1 forwards;
+    transform:rotate(90deg);
+}
+#clock72-hand2{
+    animation: hands_135_top_left2 10s ease-in-out 1s 1 forwards;
+    transform:rotate(135deg);
+}
+
+#clock77-hand1{
+    animation: hands_135_bottom_right1 10s ease-in-out 1s 1 forwards;
+    transform:rotate(180deg);
+}
+#clock77-hand2{
+    animation: hands_135_bottom_right2 10s ease-in-out 1s 1 forwards;
+    transform:rotate(230deg);
+}
+
+#clock80-hand1{
+    animation: hands_135_bottom_left1 10s ease-in-out 1s 1 forwards;
+    transform:rotate(-60deg);
+}
+#clock80-hand2{
+    animation: hands_135_bottom_left2 10s ease-in-out 1s 1 forwards;
+    transform:rotate(-20deg);
+}
+
+@keyframes hands_90_bottom_right1 {
+    from{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(450deg);
+
+    }
+}
+
+@keyframes hands_90_bottom_right2 {
+    from{
+        transform: rotate(230deg);
+    }
+    to{
+        transform: rotate(0deg);
+
+    }
+}
+
+@keyframes hands_180_vertical1 {
+    from{
+        transform: rotate(130deg);
+    }
+    to{
+        transform: rotate(-90deg);
+
+    }
+}
+
+@keyframes hands_180_vertical2 {
+    from{
+        transform: rotate(-70deg);
+    }
+    to{
+        transform: rotate(90deg);
+
+    }
+}
+
+@keyframes hands_180_horizontal1 {
+    from{
+        transform: rotate(40deg);
+    }
+    to{
+        transform: rotate(180deg);
+
+    }
+}
+
+@keyframes hands_180_horizontal2 {
+    from{
+        transform: rotate(200deg);
+    }
+    to{
+        transform: rotate(0deg);
+
+    }
+}
+
+@keyframes hands_90_bottom_left1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+
+    }
+}
+
+@keyframes hands_90_bottom_left2 {
+    from{
+        transform: rotate(300deg);
+    }
+    to{
+        transform: rotate(90deg);
+
+    }
+}
+
+@keyframes hands_90_top_right1 {
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(360deg);
+
+    }
+}
+
+@keyframes hands_90_top_right2 {
+    from{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(-90deg);
+
+    }
+}
+
+@keyframes hands_90_top_left1 {
+    from{
+        transform: rotate(30deg);
+    }
+    to{
+        transform: rotate(180deg);
+
+    }
+}
+
+@keyframes hands_90_top_left2 {
+    from{
+        transform: rotate(110deg);
+    }
+    to{
+        transform: rotate(-90deg);
+
+    }
+}
+
+@keyframes hands_0_empty1 {
+    from{
+        transform: rotate(-30deg);
+    }
+    to{
+        transform: rotate(135deg);
+
+    }
+}
+
+@keyframes hands_0_empty2 {
+    from{
+        transform: rotate(10deg);
+    }
+    to{
+        transform: rotate(-225deg);
+
+    }
+}
+
+@keyframes hands_135_top_right1 {
+    from{
+        transform: rotate(-20deg);
+    }
+    to{
+        transform: rotate(270deg);
+
+    }
+}
+
+@keyframes hands_135_top_right2 {
+    from{
+        transform: rotate(10deg);
+    }
+    to{
+        transform: rotate(-315deg);
+
+    }
+}
+
+@keyframes hands_135_top_left1 {
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(630deg);
+
+    }
+}
+
+@keyframes hands_135_top_left2 {
+    from{
+        transform: rotate(135deg);
+    }
+    to{
+        transform: rotate(-585deg);
+
+    }
+}
+
+@keyframes hands_135_bottom_right1 {
+    from{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(450deg);
+
+    }
+}
+
+@keyframes hands_135_bottom_right2 {
+    from{
+        transform: rotate(230deg);
+    }
+    to{
+        transform: rotate(-765deg);
+
+    }
+}
+
+@keyframes hands_135_bottom_left1 {
+    from{
+        transform: rotate(-60deg);
+    }
+    to{
+        transform: rotate(810deg);
+
+    }
+}
+
+@keyframes hands_135_bottom_left2 {
+    from{
+        transform: rotate(-20deg);
+    }
+    to{
+        transform: rotate(-855deg);
+
+    }
+}
